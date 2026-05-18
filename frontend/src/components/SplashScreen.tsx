@@ -214,13 +214,13 @@ export default function SplashScreen({
                     ease: [0.34, 1.56, 0.64, 1],
                   }}
                 >
-                  <img src="/logo.png" alt="Logo" className="w-24 h-24 object-contain invert" />
+                  <img src="/logo.png" alt="Logo" className="w-16 h-16 object-contain invert" />
                 </motion.div>
               </motion.div>
 
               {/* ─── Brand name with letter-by-letter reveal ─── */}
-              <div className="overflow-hidden">
-                <div className="flex items-center justify-center gap-[2px]">
+              <div className="overflow-hidden px-4 w-full">
+                <div className="flex flex-wrap items-center justify-center gap-[1px] md:gap-[2px]">
                   {"SPACE".split("").map((char, i) => (
                     <motion.span
                       key={`s-${i}`}
@@ -232,10 +232,10 @@ export default function SplashScreen({
                         ease: "easeOut",
                       }}
                       style={{
-                        fontSize: 38,
+                        fontSize: "clamp(20px, 6vw, 38px)",
                         fontWeight: 200,
                         color: "#ffffff",
-                        letterSpacing: "0.35em",
+                        letterSpacing: "0.25em",
                         fontFamily: "Georgia, 'Times New Roman', serif",
                       }}
                     >
@@ -246,7 +246,7 @@ export default function SplashScreen({
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 3.6, duration: 0.3 }}
-                    style={{ width: 24, display: "inline-block" }}
+                    style={{ width: "clamp(10px, 3vw, 24px)", display: "inline-block" }}
                   />
                   {"CRAFTERS".split("").map((char, i) => (
                     <motion.span
@@ -259,10 +259,10 @@ export default function SplashScreen({
                         ease: "easeOut",
                       }}
                       style={{
-                        fontSize: 38,
+                        fontSize: "clamp(20px, 6vw, 38px)",
                         fontWeight: 200,
                         color: "#ffffff",
-                        letterSpacing: "0.35em",
+                        letterSpacing: "0.25em",
                         fontFamily: "Georgia, 'Times New Roman', serif",
                       }}
                     >
