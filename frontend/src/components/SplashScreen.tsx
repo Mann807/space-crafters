@@ -318,7 +318,7 @@ export default function SplashScreen({
                   delay: 4.8,
                   duration: 0.8,
                   repeat: 3,
-                  ease: "steps(2)",
+                  ease: "linear",
                 }}
                 style={{
                   width: 1,
