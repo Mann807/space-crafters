@@ -1,0 +1,5 @@
+Start-Process powershell -ArgumentList "-NoExit -Command `"cd backend; .\venv\Scripts\activate; uvicorn main:app --reload`""
+Start-Process powershell -ArgumentList "-NoExit -Command `"cd frontend; npm run dev`""
+Write-Host "Both Frontend and Backend are starting..."
+Write-Host "Frontend will be available at http://localhost:3000"
+Write-Host "Backend API will be available at http://localhost:8000"

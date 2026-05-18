@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VR Walkthrough & AR Furniture</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="skyTexture" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" crossorigin="anonymous">
+      </a-assets>
+
+      <a-sky src="#skyTexture"></a-sky>
+
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#c29b76" shadow></a-box>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#e5d9c5" shadow></a-plane>
+
+      <a-camera>
+        <a-cursor color="#FFF"></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
