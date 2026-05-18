@@ -284,14 +284,15 @@ export default function SplashScreen({
                 animate={{ opacity: 0.6 }}
                 transition={{ delay: 4.8, duration: 1 }}
                 style={{
-                  fontSize: "clamp(9px, 2.5vw, 13px)",
+                  fontSize: "clamp(8px, 2.2vw, 13px)",
                   color: "#c29b76",
-                  letterSpacing: "0.3em",
+                  letterSpacing: "0.15em",
                   textTransform: "uppercase",
                   fontFamily: "Georgia, 'Times New Roman', serif",
                   fontWeight: 300,
                   textAlign: "center",
                   padding: "0 16px",
+                  whiteSpace: "nowrap",
                 }}
               >
                 Interior Design Studio
