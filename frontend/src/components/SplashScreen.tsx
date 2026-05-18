@@ -218,51 +218,41 @@ export default function SplashScreen({
                 </motion.div>
               </motion.div>
 
-              {/* ─── Brand name with letter-by-letter reveal ─── */}
-              <div className="overflow-hidden px-4 w-full">
-                <div className="flex flex-wrap items-center justify-center gap-[1px] md:gap-[2px]">
+              {/* ─── Brand name: stacked on mobile, inline on desktop ─── */}
+              <div className="flex flex-col items-center justify-center w-full px-4">
+                {/* SPACE */}
+                <div className="flex items-center justify-center">
                   {"SPACE".split("").map((char, i) => (
                     <motion.span
                       key={`s-${i}`}
                       initial={{ y: 50, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
-                      transition={{
-                        delay: 3.2 + i * 0.08,
-                        duration: 0.5,
-                        ease: "easeOut",
-                      }}
+                      transition={{ delay: 3.2 + i * 0.08, duration: 0.5, ease: "easeOut" }}
                       style={{
-                        fontSize: "clamp(20px, 6vw, 38px)",
+                        fontSize: "clamp(22px, 8vw, 38px)",
                         fontWeight: 200,
                         color: "#ffffff",
-                        letterSpacing: "0.25em",
+                        letterSpacing: "0.3em",
                         fontFamily: "Georgia, 'Times New Roman', serif",
                       }}
                     >
                       {char}
                     </motion.span>
                   ))}
-                  <motion.span
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 3.6, duration: 0.3 }}
-                    style={{ width: "clamp(10px, 3vw, 24px)", display: "inline-block" }}
-                  />
+                </div>
+                {/* CRAFTERS */}
+                <div className="flex items-center justify-center">
                   {"CRAFTERS".split("").map((char, i) => (
                     <motion.span
                       key={`c-${i}`}
                       initial={{ y: 50, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
-                      transition={{
-                        delay: 3.6 + i * 0.08,
-                        duration: 0.5,
-                        ease: "easeOut",
-                      }}
+                      transition={{ delay: 3.6 + i * 0.08, duration: 0.5, ease: "easeOut" }}
                       style={{
-                        fontSize: "clamp(20px, 6vw, 38px)",
+                        fontSize: "clamp(22px, 8vw, 38px)",
                         fontWeight: 200,
                         color: "#ffffff",
-                        letterSpacing: "0.25em",
+                        letterSpacing: "0.3em",
                         fontFamily: "Georgia, 'Times New Roman', serif",
                       }}
                     >
@@ -288,46 +278,26 @@ export default function SplashScreen({
                 }}
               />
 
-              {/* ─── Tagline typed out ─── */}
-              <div className="flex gap-[3px]">
-                {"Interior Design Studio".split("").map((char, i) => (
-                  <motion.span
-                    key={`t-${i}`}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 0.6 }}
-                    transition={{ delay: 4.8 + i * 0.04, duration: 0.1 }}
-                    style={{
-                      fontSize: 14,
-                      color: "#c29b76",
-                      letterSpacing: "0.5em",
-                      textTransform: "uppercase",
-                      fontFamily: "Georgia, 'Times New Roman', serif",
-                      fontWeight: 300,
-                    }}
-                  >
-                    {char === " " ? "\u00A0\u00A0" : char}
-                  </motion.span>
-                ))}
-              </div>
-
-              {/* ─── Blinking cursor after tagline ─── */}
-              <motion.div
+              {/* ─── Tagline ─── */}
+              <motion.p
                 initial={{ opacity: 0 }}
-                animate={{ opacity: [0, 1, 0] }}
-                transition={{
-                  delay: 4.8,
-                  duration: 0.8,
-                  repeat: 3,
-                  ease: "linear",
-                }}
+                animate={{ opacity: 0.6 }}
+                transition={{ delay: 4.8, duration: 1 }}
                 style={{
-                  width: 1,
-                  height: 14,
-                  background: "#c29b76",
-                  marginTop: -14,
-                  marginLeft: 420,
+                  fontSize: "clamp(9px, 2.5vw, 13px)",
+                  color: "#c29b76",
+                  letterSpacing: "0.3em",
+                  textTransform: "uppercase",
+                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontWeight: 300,
+                  textAlign: "center",
+                  padding: "0 16px",
                 }}
-              />
+              >
+                Interior Design Studio
+              </motion.p>
+
+
             </div>
 
             {/* ─── Corner ornaments ─── */}
