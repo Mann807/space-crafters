@@ -13,7 +13,7 @@ export default function AIStyleRecommender() {
     setLoading(true);
     
     try {
-      const res = await fetch('http://localhost:8000/recommend-style/', {
+      const res = await fetch('https://space-crafters-2.onrender.com/recommend-style/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ preferences: preference }),

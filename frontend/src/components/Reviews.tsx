@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Star } from 'lucide-react';
 
-const API_URL = "https://space-crafters.onrender.com";
+const API_URL = "https://space-crafters-2.onrender.com";
 
 interface Review {
   id: number;
